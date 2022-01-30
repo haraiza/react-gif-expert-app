@@ -4,7 +4,7 @@ import { AddCategory } from './components/AddCategory';
 export const GifExpertApp = () => {
   // const categories = ['One Punch', 'Samurai X', 'Dragon ball'];
 
-  const [categories, setcategories] = useState([
+  const [categories, setCategories] = useState([
     'One Punch',
     'Samurai X',
     'Dragon ball',
@@ -13,7 +13,9 @@ export const GifExpertApp = () => {
   return (
     <>
       <h2>GifExpertApp</h2>
-      <AddCategory></AddCategory>
+
+      {/* Se envia el metodo setCategories para que lo maneje AddCategory */}
+      <AddCategory setCategories={setCategories} />
       <hr />
 
       <ol>
